@@ -142,6 +142,7 @@
     <Compile Include="Assets\Scripts\UI\UIBase.cs" />
     <Compile Include="Assets\Scripts\Framework\ManagerBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Scripts\UI\ReadyPanel.cs" />
     <Compile Include="Assets\Scripts\UI\CreatePanel.cs" />
   </ItemGroup>
   <ItemGroup>

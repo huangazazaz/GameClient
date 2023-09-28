@@ -31,7 +31,7 @@ public class UIBase : MonoBase
     /// <summary>
     /// 自动移除绑定的消息
     /// </summary>
-    public  virtual void OnDestroy()
+    public virtual void OnDestroy()
     {
         if (list != null)
             UnBind();

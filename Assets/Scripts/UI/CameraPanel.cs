@@ -24,17 +24,17 @@ public class CameraPanel : UIBase
                     //setPanelActive(true);
                     switch ((int)message)
                     {
-                        case 0:
-                            c1.SetActive(true);
-                            break;
                         case 1:
-                            c2.SetActive(true);
+                            c1.gameObject.SetActive(true);
                             break;
                         case 2:
-                            c3.SetActive(true);
+                            c2.gameObject.SetActive(true);
                             break;
                         case 3:
-                            c4.SetActive(true);
+                            c3.gameObject.SetActive(true);
+                            break;
+                        case 4:
+                            c4.gameObject.SetActive(true);
                             break;
                     }
                     break;
@@ -45,21 +45,21 @@ public class CameraPanel : UIBase
     }
 
     //private Button b = null;
-    private GameObject c1 = null;
-    private GameObject c2 = null;
-    private GameObject c3 = null;
-    private GameObject c4 = null;
+    private Camera c1 = null;
+    private Camera c2 = null;
+    private Camera c3 = null;
+    private Camera c4 = null;
 
     protected virtual void Start()
     {
         //b = transform.Find("Button").GetComponent<Button>();
-        c1 = GameObject.Find("Camera1");
-        c2 = GameObject.Find("Camera2");
-        c3 = GameObject.Find("Camera3");
-        c4 = GameObject.Find("Camera4");
-        c1.SetActive(false);
-        c2.SetActive(false);
-        c3.SetActive(false);
-        c4.SetActive(false);
+        c1 = transform.Find("Camera1").GetComponent<Camera>();
+        c2 = transform.Find("Camera2").GetComponent<Camera>();
+        c3 = transform.Find("Camera3").GetComponent<Camera>();
+        c4 = transform.Find("Camera4").GetComponent<Camera>();
+        c1.gameObject.SetActive(false);
+        c2.gameObject.SetActive(false);
+        c3.gameObject.SetActive(false);
+        c4.gameObject.SetActive(false);
     }
 }

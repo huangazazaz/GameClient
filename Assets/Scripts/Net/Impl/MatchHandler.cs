@@ -52,20 +52,20 @@ public class MatchHandler : HandlerBase
     /// <summary>
     /// 准备的广播处理
     /// </summary>
-    /// <param name="readyUserId"></param>
-    private void readyBro(int readyUserId)
+    /// <param name="readyInd"></param>
+    private void readyBro(int readyInd)
     {
         //保存数据
-        Models.GameModel.MatchRoomDto.Ready(readyUserId);
+        Models.GameModel.MatchRoomDto.Ready(readyInd);
         //显示为玩家状态面板的准备文字
-        Dispatch(AreaCode.UI, UIEvent.PLAYER_READY, readyUserId);
+        Dispatch(AreaCode.UI, UIEvent.PLAYER_READY, readyInd);
 
-        //fixbug923 判断是否是自身
-        if (readyUserId == Models.GameModel.UserDto.Id)
-        {
-            //发送消息 隐藏准备按钮 防止多次点击 和服务器交互
-            Dispatch(AreaCode.UI, UIEvent.PLAYER_HIDE_READY_BUTTON, null);
-        }
+        ////fixbug923 判断是否是自身
+        //if (readyId == Models.GameModel.UserDto.Id)
+        //{
+        //    //发送消息 隐藏准备按钮 防止多次点击 和服务器交互
+        //    Dispatch(AreaCode.UI, UIEvent.PLAYER_HIDE_READY_BUTTON, null);
+        //}
     }
 
     /// <summary>
