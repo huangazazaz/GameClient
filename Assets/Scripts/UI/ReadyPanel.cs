@@ -1,4 +1,5 @@
 using Protocol.Code;
+using Protocol.Dto;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,10 +14,11 @@ public class ReadyPanel : UIBase
     private TMP_Text ready3;
     private Button ready;
     private int ind;
+    private MatchRoomDto matchRoom;
 
     protected virtual void Awake()
     {
-        Bind(UIEvent.SET_CAMERA, UIEvent.PLAYER_READY);
+        Bind(UIEvent.SET_CAMERA, UIEvent.SET_INFORMATION);
     }
 
     public override void Execute(int eventCode, object message)
@@ -29,27 +31,31 @@ public class ReadyPanel : UIBase
                     Debug.Log(ind);
                     break;
                 }
-            case UIEvent.PLAYER_READY:
+            case UIEvent.SET_INFORMATION:
                 {
-                    Debug.Log((int)message);
-                    int readyInd = (int)message;
-                    int position = (readyInd - ind + 4) % 4;
-                    switch (position)
-                    {
-                        case 0:
-                            ready0.gameObject.SetActive(true);
-                            ready.gameObject.SetActive(false);
-                            break;
-                        case 1:
-                            ready1.gameObject.SetActive(true);
-                            break;
-                        case 2:
-                            ready2.gameObject.SetActive(true);
-                            break;
-                        case 3:
-                            ready3.gameObject.SetActive(true);
-                            break;
+                    matchRoom = (MatchRoomDto)message;
+                    //int readyInd = matchRoom;
 
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        if (matchRoom.ReadySeat[i] != 1) continue;
+                        switch (i)
+                        {
+                            case 0:
+                                ready0.gameObject.SetActive(true);
+                                ready.gameObject.SetActive(false);
+                                break;
+                            case 1:
+                                ready1.gameObject.SetActive(true);
+                                break;
+                            case 2:
+                                ready2.gameObject.SetActive(true);
+                                break;
+                            case 3:
+                                ready3.gameObject.SetActive(true);
+                                break;
+
+                        }
                     }
                     break;
                 }

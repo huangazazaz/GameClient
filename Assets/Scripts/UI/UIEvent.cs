@@ -38,6 +38,7 @@ public class UIEvent
     public const int SHOW_OVER_PANEL = 18;//显示结束面板
 
     public const int SET_CAMERA = 19;
+    public const int SET_INFORMATION = 20;
 
     //....
 

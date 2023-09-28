@@ -13,13 +13,13 @@ public class MatchHandler : HandlerBase
                 enterResponse(value as MatchRoomDto);
                 break;
             case MatchCode.ENTER_BRO:
-                enterBro(value as UserDto);
+                enterBro(value as MatchRoomDto);
                 break;
             case MatchCode.LEAVE_BRO:
-                leaveBro((int)value);
+                leaveBro(value as MatchRoomDto);
                 break;
             case MatchCode.READY_BRO:
-                readyBro((int)value);
+                readyBro(value as MatchRoomDto);
                 break;
             case MatchCode.START_BRO:
                 startBro();
@@ -53,12 +53,12 @@ public class MatchHandler : HandlerBase
     /// 准备的广播处理
     /// </summary>
     /// <param name="readyInd"></param>
-    private void readyBro(int readyInd)
+    private void readyBro(MatchRoomDto roomDto)
     {
         //保存数据
-        Models.GameModel.MatchRoomDto.Ready(readyInd);
+        //Models.GameModel.MatchRoomDto.Ready(readyInd);
         //显示为玩家状态面板的准备文字
-        Dispatch(AreaCode.UI, UIEvent.PLAYER_READY, readyInd);
+        Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, roomDto);
 
         ////fixbug923 判断是否是自身
         //if (readyId == Models.GameModel.UserDto.Id)
@@ -72,15 +72,15 @@ public class MatchHandler : HandlerBase
     /// 离开的广播处理
     /// </summary>
     /// <param name="leaveUserId"></param>
-    private void leaveBro(int leaveUserId)
+    private void leaveBro(MatchRoomDto roomDto)
     {
         //发消息 隐藏玩家的状态面板所有游戏物体
-        Dispatch(AreaCode.UI, UIEvent.PLAYER_LEAVE, leaveUserId);
+        Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, roomDto);
 
         //resetPosition();
 
         //保存数据
-        Models.GameModel.MatchRoomDto.Leave(leaveUserId);
+        //Models.GameModel.MatchRoomDto.Leave(leaveUserId);
     }
 
     /// <summary>
@@ -117,7 +117,7 @@ public class MatchHandler : HandlerBase
         ////自身的角色是肯定在的 可以直接的来更新自身的数据
         //int myUserId = Models.GameModel.UserDto.Id;
         //UserDto myUserDto = matchRoom.UIdUserDict[myUserId];
-        //Dispatch(AreaCode.UI, UIEvent.SET_MY_PLAYER_DATA, myUserDto);
+        Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, matchRoom);
 
         //显示进入房间的按钮
         Dispatch(AreaCode.UI, UIEvent.SHOW_ENTER_ROOM_BUTTON, null);
@@ -127,15 +127,15 @@ public class MatchHandler : HandlerBase
     /// 他人进入的广播处理
     /// </summary>
     /// <param name="newUser"></param>
-    private void enterBro(UserDto newUser)
+    private void enterBro(MatchRoomDto roomDto)
     {
         //fix bug
         ////发消息 显示玩家的状态面板所有游戏物体
         //Dispatch(AreaCode.UI, UIEvent.PLAYER_ENTER, newUser.Id);
 
         //更新房间数据
-        MatchRoomDto room = Models.GameModel.MatchRoomDto;
-        room.Add(newUser);
+        //MatchRoomDto room = Models.GameModel.MatchRoomDto;
+        //room.Add(newUser);
         //resetPosition();
 
         ////给UI绑定数据
@@ -151,10 +151,10 @@ public class MatchHandler : HandlerBase
         //}
 
         //发消息 显示玩家的状态面板所有游戏物体
-        Dispatch(AreaCode.UI, UIEvent.PLAYER_ENTER, newUser.Id);
+        Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, roomDto);
 
         //给用户一个提示
-        promptMsg.Change("有新玩家 ( " + newUser.Name + " )进入", UnityEngine.Color.blue);
+        promptMsg.Change("有新玩家进入", UnityEngine.Color.blue);
         Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
     }
 
