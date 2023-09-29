@@ -18,7 +18,7 @@ public class InfoPanel : UIBase
         {
             case UIEvent.REFRESH_INFO_PANEL:
                 UserDto user = message as UserDto;
-                refreshPanel(user.Name, user.Lv, user.Exp, user.Been);
+                refreshPanel(user.Name, user.Lv, user.Exp, user.Token);
                 break;
             default:
                 break;

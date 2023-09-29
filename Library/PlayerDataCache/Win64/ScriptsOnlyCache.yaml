@@ -1,11 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp:
-    - CardCtrl
     Assembly-CSharp.dll:
     - BGAudio
     - CameraPanel
     - CreatePanel
+    - Desk
     - InfoPanel
     - MatchPanel
     - MsgCenter
@@ -121,29 +120,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1594}
+      Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 4078}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 3944}
     - Class: 114
-      Script: {instanceID: 5052}
+      Script: {instanceID: 4084}
     - Class: 114
-      Script: {instanceID: 5608}
+      Script: {instanceID: 4654}
     - Class: 114
-      Script: {instanceID: 5760}
+      Script: {instanceID: 4874}
     - Class: 114
-      Script: {instanceID: 6076}
+      Script: {instanceID: 5060}
     - Class: 114
-      Script: {instanceID: 6874}
+      Script: {instanceID: 5380}
     - Class: 114
-      Script: {instanceID: 26752}
+      Script: {instanceID: 5616}
+    - Class: 114
+      Script: {instanceID: 5768}
+    - Class: 114
+      Script: {instanceID: 6084}
+    - Class: 114
+      Script: {instanceID: 6412}
+    - Class: 114
+      Script: {instanceID: 6880}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,6 +166,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     Assets/Scenes/LobbySence.unity:
     - Class: 1
@@ -182,39 +191,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1552}
+      Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 1594}
+      Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 2680}
+      Script: {instanceID: 2682}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 4138}
     - Class: 114
-      Script: {instanceID: 4928}
+      Script: {instanceID: 4936}
     - Class: 114
-      Script: {instanceID: 4980}
+      Script: {instanceID: 4988}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 5208}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 5380}
     - Class: 114
-      Script: {instanceID: 5608}
+      Script: {instanceID: 5616}
     - Class: 114
-      Script: {instanceID: 6076}
+      Script: {instanceID: 6084}
     - Class: 114
-      Script: {instanceID: 6326}
+      Script: {instanceID: 6334}
     - Class: 114
-      Script: {instanceID: 6404}
+      Script: {instanceID: 6412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -261,47 +270,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1594}
+      Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 2176}
+      Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2178}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 3186}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3262}
+      Script: {instanceID: 3188}
     - Class: 114
-      Script: {instanceID: 3914}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 3982}
+      Script: {instanceID: 3918}
     - Class: 114
-      Script: {instanceID: 4016}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 4078}
+      Script: {instanceID: 4022}
     - Class: 114
-      Script: {instanceID: 4092}
+      Script: {instanceID: 4084}
     - Class: 114
-      Script: {instanceID: 4344}
+      Script: {instanceID: 4098}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 4350}
     - Class: 114
-      Script: {instanceID: 5052}
+      Script: {instanceID: 4874}
     - Class: 114
-      Script: {instanceID: 5072}
+      Script: {instanceID: 5060}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 5608}
+      Script: {instanceID: 5380}
     - Class: 114
-      Script: {instanceID: 5760}
+      Script: {instanceID: 5616}
     - Class: 114
-      Script: {instanceID: 6076}
+      Script: {instanceID: 5768}
     - Class: 114
-      Script: {instanceID: 7262}
+      Script: {instanceID: 6084}
+    - Class: 114
+      Script: {instanceID: 6412}
+    - Class: 114
+      Script: {instanceID: 7268}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -446,21 +459,9 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RightPlayerCtrl
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MyPlayerCtrl
   - hash:
       serializedVersion: 2
       Hash: 1bfcfbce150993e56fae19f40f3da27f
@@ -776,6 +777,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Desk
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionStay2DMessageListener
@@ -905,6 +912,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_TextInfoDebugTool
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ReadyPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1232,12 +1245,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UpPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerEnterMessageListener
@@ -1295,12 +1302,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LeftPlayerCtrl
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1412,12 +1413,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CardCtrl
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
@@ -1523,18 +1518,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DeskCtrl
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ReadyPanel
   platform: 19
   scenePathNames:
   - Assets/Scenes/LoginSence.unity

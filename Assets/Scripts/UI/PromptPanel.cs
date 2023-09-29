@@ -24,7 +24,7 @@ public class PromptPanel : UIBase
         }
     }
 
-    private TMP_Text txt;
+    private Text txt;
     private CanvasGroup cg;
 
     [SerializeField]
@@ -36,7 +36,7 @@ public class PromptPanel : UIBase
     // Use this for initialization
     void Start()
     {
-        txt = transform.Find("Text").GetComponent<TMP_Text>();
+        txt = transform.Find("Text").GetComponent<Text>();
         cg = transform.Find("Text").GetComponent<CanvasGroup>();
 
         cg.alpha = 0;

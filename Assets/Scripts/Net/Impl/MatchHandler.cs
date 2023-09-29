@@ -25,7 +25,10 @@ public class MatchHandler : HandlerBase
                 startBro();
                 break;
             case MatchCode.SET_CAMERA:
-                set((int)value);
+                setCamera((int)value);
+                break;
+            case MatchCode.SET_INFO:
+                setInfo(value as MatchRoomDto);
                 break;
             default:
                 break;
@@ -42,11 +45,15 @@ public class MatchHandler : HandlerBase
         promptMsg.Change("所有玩家准备开始游戏", UnityEngine.Color.blue);
         Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
         //开始游戏 隐藏状态面板的准备文字
-        Dispatch(AreaCode.UI, UIEvent.PLAYER_HIDE_STATE, null);
+        Dispatch(AreaCode.UI, UIEvent.HIND_INFO, null);
     }
-    private void set(int value)
+    private void setCamera(int value)
     {
         Dispatch(AreaCode.UI, UIEvent.SET_CAMERA, value);
+    }
+    private void setInfo(MatchRoomDto roomDto)
+    {
+        Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, roomDto);
     }
 
     /// <summary>
@@ -110,14 +117,14 @@ public class MatchHandler : HandlerBase
         //    Dispatch(AreaCode.UI, UIEvent.SET_RIGHT_PLAYER_DATA, rightUserDto);
         //}
 
-        Models.GameModel.MatchRoomDto = matchRoom;
+        //Models.GameModel.MatchRoomDto = matchRoom;
         //resetPosition();
 
         //fixbug923
         ////自身的角色是肯定在的 可以直接的来更新自身的数据
         //int myUserId = Models.GameModel.UserDto.Id;
         //UserDto myUserDto = matchRoom.UIdUserDict[myUserId];
-        Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, matchRoom);
+        //Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, matchRoom);
 
         //显示进入房间的按钮
         Dispatch(AreaCode.UI, UIEvent.SHOW_ENTER_ROOM_BUTTON, null);
@@ -154,8 +161,8 @@ public class MatchHandler : HandlerBase
         Dispatch(AreaCode.UI, UIEvent.SET_INFORMATION, roomDto);
 
         //给用户一个提示
-        promptMsg.Change("有新玩家进入", UnityEngine.Color.blue);
-        Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
+        //promptMsg.Change("有新玩家进入", UnityEngine.Color.blue);
+        //Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
     }
 
     /// <summary>

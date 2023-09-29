@@ -1,5 +1,6 @@
 ﻿using Protocol.Code;
 using Protocol.Constant;
+using Protocol.Dto;
 using Protocol.Dto.Fight;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,30 +12,38 @@ public class FightHandler : HandlerBase
     {
         switch (subCode)
         {
-            case FightCode.GET_CARD_SRES:
-                getCards(value as List<CardDto>);
+            case FightCode.THROW_THE_DICE:
+                refreshMahjongPosition(value as FightRoomDto);
                 break;
-            case FightCode.TURN_GRAB_BRO:
-                turnGrabBro((int)value);
-                break;
-            case FightCode.GRAB_LANDLORD_BRO:
-                grabLandlordBro(value as GrabDto);
-                break;
-            case FightCode.TURN_DEAL_BRO:
-                turnDealBro((int)value);
-                break;
-            case FightCode.DEAL_BRO:
-                dealBro(value as DealDto);
-                break;
-            case FightCode.DEAL_SRES:
-                dealResponse((int)value);
-                break;
-            case FightCode.OVER_BRO:
-                overBro(value as OverDto);
-                break;
+            //    case FightCode.GET_CARD_SRES:
+            //        getCards(value as List<CardDto>);
+            //        break;
+            //    case FightCode.TURN_GRAB_BRO:
+            //        turnGrabBro((int)value);
+            //        break;
+            //    case FightCode.GRAB_LANDLORD_BRO:
+            //        grabLandlordBro(value as GrabDto);
+            //        break;
+            //    case FightCode.TURN_DEAL_BRO:
+            //        turnDealBro((int)value);
+            //        break;
+            //    case FightCode.DEAL_BRO:
+            //        dealBro(value as DealDto);
+            //        break;
+            //    case FightCode.DEAL_SRES:
+            //        dealResponse((int)value);
+            //        break;
+            //    case FightCode.OVER_BRO:
+            //        overBro(value as OverDto);
+            //        break;
             default:
                 break;
         }
+    }
+
+    private void refreshMahjongPosition(FightRoomDto dto)
+    {
+        Dispatch(AreaCode.UI, UIEvent.REFRESH_MAHJONG_POSITION, dto);
     }
 
     /// <summary>
@@ -44,7 +53,7 @@ public class FightHandler : HandlerBase
     private void overBro(OverDto dto)
     {
         //播放结果音效
-        if(dto.WinUIdList.Contains(Models.GameModel.Id))
+        if (dto.WinUIdList.Contains(Models.GameModel.Id))
         {
             Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/MusicEx_Win");
         }
@@ -106,41 +115,41 @@ public class FightHandler : HandlerBase
     {
         string audioName = "Fight/";
 
-        switch (cardType)
-        {
-            case CardType.SINGLE:
-                audioName += "Woman_" + weight;
-                break;
-            case CardType.DOUBLE:
-                audioName += "Woman_dui" + weight / 2;
-                break;
-            case CardType.STRAIGHT:
-                audioName += "Woman_shunzi";
-                break;
-            case CardType.DOUBLE_STRAIGHT:
-                audioName += "Woman_liandui";
-                break;
-            case CardType.TRIPLE_STRAIGHT:
-                audioName += "Woman_feiji";
-                break;
-            case CardType.THREE:
-                audioName += "Woman_tuple" + weight / 3;
-                break;
-            case CardType.THREE_ONE:
-                audioName += "Woman_sandaiyi";
-                break;
-            case CardType.THREE_TWO:
-                audioName += "Woman_sandaiyidui";
-                break;
-            case CardType.BOOM:
-                audioName += "Woman_zhadan";
-                break;
-            case CardType.JOKER_BOOM:
-                audioName += "Woman_wangzha";
-                break;
-            default:
-                break;
-        }
+        //switch (cardType)
+        //{
+        //    case CardType.SINGLE:
+        //        audioName += "Woman_" + weight;
+        //        break;
+        //    case CardType.DOUBLE:
+        //        audioName += "Woman_dui" + weight / 2;
+        //        break;
+        //    case CardType.STRAIGHT:
+        //        audioName += "Woman_shunzi";
+        //        break;
+        //    case CardType.DOUBLE_STRAIGHT:
+        //        audioName += "Woman_liandui";
+        //        break;
+        //    case CardType.TRIPLE_STRAIGHT:
+        //        audioName += "Woman_feiji";
+        //        break;
+        //    case CardType.THREE:
+        //        audioName += "Woman_tuple" + weight / 3;
+        //        break;
+        //    case CardType.THREE_ONE:
+        //        audioName += "Woman_sandaiyi";
+        //        break;
+        //    case CardType.THREE_TWO:
+        //        audioName += "Woman_sandaiyidui";
+        //        break;
+        //    case CardType.BOOM:
+        //        audioName += "Woman_zhadan";
+        //        break;
+        //    case CardType.JOKER_BOOM:
+        //        audioName += "Woman_wangzha";
+        //        break;
+        //    default:
+        //        break;
+        //}
 
         Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, audioName);
     }
@@ -167,7 +176,7 @@ public class FightHandler : HandlerBase
         //播放抢地主的声音
         Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/Woman_Order");
         //显示三张底牌
-        Dispatch(AreaCode.UI, UIEvent.SET_TABLE_CARDS, dto.TableCardList);
+        //Dispatch(AreaCode.UI, UIEvent.SET_TABLE_CARDS, dto.TableCardList);
         //给对应的地主玩家 添加手牌显示出来
         int eventCode = -1;
         //if (dto.UserId == Models.GameModel.MatchRoomDto.LeftId)
@@ -217,14 +226,14 @@ public class FightHandler : HandlerBase
     /// 获取到卡牌的处理
     /// </summary>
     /// <param name="cardList"></param>
-    private void getCards(List<CardDto> cardList)
-    {
-        //给自己玩家创建牌的对象
-        Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_MY_CARD, cardList);
-        Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_LEFT_CARD, null);
-        Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_RIGHT_CARD, null);
+    //private void getCards(List<CardDto> cardList)
+    //{
+    //    //给自己玩家创建牌的对象
+    //    Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_MY_CARD, cardList);
+    //    Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_LEFT_CARD, null);
+    //    Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_RIGHT_CARD, null);
 
-        //设置倍数为1
-        Dispatch(AreaCode.UI, UIEvent.CHANGE_MUTIPLE, 1);
-    }
+    //    //设置倍数为1
+    //    Dispatch(AreaCode.UI, UIEvent.CHANGE_MUTIPLE, 1);
+    //}
 }

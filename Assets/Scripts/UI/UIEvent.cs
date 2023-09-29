@@ -16,7 +16,7 @@ public class UIEvent
     public const int SHOW_ENTER_ROOM_BUTTON = 3;//显示进入房间按钮
     public const int CREATE_PANEL_ACTIVE = 4;//设置创建面板的显示
 
-    public const int SET_TABLE_CARDS = 5;//设置底牌
+    public const int REFRESH_MAHJONG_POSITION = 5;//刷新麻将位置
     public const int SET_LEFT_PLAYER_DATA = 6;//设置左边的角色的数据
     public const int SET_RIGHT_PLAYER_DATA = 13;//设置右边角色数据
     //fixbug923
@@ -39,6 +39,7 @@ public class UIEvent
 
     public const int SET_CAMERA = 19;
     public const int SET_INFORMATION = 20;
+    public const int HIND_INFO = 21;
 
     //....
 
