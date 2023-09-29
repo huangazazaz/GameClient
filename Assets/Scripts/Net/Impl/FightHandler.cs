@@ -12,8 +12,18 @@ public class FightHandler : HandlerBase
     {
         switch (subCode)
         {
-            case FightCode.THROW_THE_DICE:
+            case FightCode.SHUFFLE:
                 refreshMahjongPosition(value as FightRoomDto);
+                Dispatch(AreaCode.UI, UIEvent.REFRESH_MAHJONG_POSITION, null);
+                break;
+            case FightCode.LEAVE_BRO:
+                playerLeave((int)value);
+                break;
+            case FightCode.READY_THROW:
+                Dispatch(AreaCode.UI, UIEvent.READY_THROW, value as FightRoomDto);
+                break;
+            case FightCode.THROW_THE_DICE:
+                Dispatch(AreaCode.UI, UIEvent.THROW_THE_DICE, (value as FightRoomDto).dice);
                 break;
             //    case FightCode.GET_CARD_SRES:
             //        getCards(value as List<CardDto>);
@@ -45,6 +55,12 @@ public class FightHandler : HandlerBase
     {
         Dispatch(AreaCode.UI, UIEvent.REFRESH_MAHJONG_POSITION, dto);
     }
+    private void playerLeave(int index)
+    {
+        PromptMsg prompt = new PromptMsg();
+        prompt.Change(index.ToString() + "号位玩家离开对局", UnityEngine.Color.blue);
+        Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, prompt);
+    }
 
     /// <summary>
     /// 结束广播
@@ -71,14 +87,14 @@ public class FightHandler : HandlerBase
     /// <param name=""></param>
     private void dealResponse(int result)
     {
-        if (result == -1)
-        {
-            //玩家出的牌管不上上一个玩家出的牌
-            PromptMsg promptMsg = new PromptMsg("玩家出的牌管不上上一个玩家出的牌", Color.red);
-            Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
-            //重新显示出牌按钮
-            Dispatch(AreaCode.UI, UIEvent.SHOW_DEAL_BUTTON, true);
-        }
+        //if (result == -1)
+        //{
+        //    //玩家出的牌管不上上一个玩家出的牌
+        //    PromptMsg promptMsg = new PromptMsg("玩家出的牌管不上上一个玩家出的牌", Color.red);
+        //    Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
+        //    //重新显示出牌按钮
+        //    Dispatch(AreaCode.UI, UIEvent.SHOW_DEAL_BUTTON, true);
+        //}
     }
 
     /// <summary>
@@ -160,10 +176,10 @@ public class FightHandler : HandlerBase
     /// <param name="userId">出牌者id</param>
     private void turnDealBro(int userId)
     {
-        if (Models.GameModel.Id == userId)
-        {
-            Dispatch(AreaCode.UI, UIEvent.SHOW_DEAL_BUTTON, true);
-        }
+        //if (Models.GameModel.Id == userId)
+        //{
+        //    Dispatch(AreaCode.UI, UIEvent.SHOW_DEAL_BUTTON, true);
+        //}
     }
 
     /// <summary>
@@ -215,11 +231,11 @@ public class FightHandler : HandlerBase
             Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/Woman_NoOrder");
         }
 
-        //如果是自身 就显示 两个抢地主和不抢地主的按钮
-        if (userId == Models.GameModel.UserDto.Id)
-        {
-            Dispatch(AreaCode.UI, UIEvent.SHOW_GRAB_BUTTON, true);
-        }
+        ////如果是自身 就显示 两个抢地主和不抢地主的按钮
+        //if (userId == Models.GameModel.UserDto.Id)
+        //{
+        //    Dispatch(AreaCode.UI, UIEvent.SHOW_GRAB_BUTTON, true);
+        //}
     }
 
     /// <summary>

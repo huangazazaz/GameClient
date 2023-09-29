@@ -68,21 +68,21 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Scripts\Net\Impl\UserHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\Scripts\Character\MyPlayerCtrl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\Scripts\Character\RightPlayerCtrl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Net\Impl\AccoutHandler.cs" />
     <Compile Include="Assets\Scripts\Net\Impl\MatchHandler.cs" />
     <Compile Include="Assets\Scripts\Net\EncodeTool.cs" />
     <Compile Include="Assets\Scripts\UI\CameraPanel.cs" />
     <Compile Include="Assets\Scripts\Scene\SceneMgr.cs" />
+    <Compile Include="Assets\Scripts\UI\StatePanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\UI\StartPanel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\UI\Msg\ControlPanel.cs" />
     <Compile Include="Assets\Scripts\Net\HandlerBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Scene\Msg\LoadSceneMsg.cs" />
@@ -114,7 +114,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-    <Compile Include="Assets\Scripts\Character\LeftPlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\Net\NetManager.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterEvent.cs" />
     <Compile Include="Assets\Scripts\Framework\MonoBase.cs" />
@@ -141,6 +140,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\UI\ReadyPanel.cs" />
     <Compile Include="Assets\Scripts\UI\CreatePanel.cs" />
+    <Compile Include="Assets\Scripts\UI\ControlPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

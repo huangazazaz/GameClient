@@ -42,10 +42,10 @@ public class MatchHandler : HandlerBase
     /// </summary>
     private void startBro()
     {
-        promptMsg.Change("所有玩家准备开始游戏", UnityEngine.Color.blue);
-        Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
+        //promptMsg.Change("所有玩家准备开始游戏", UnityEngine.Color.blue);
+        //Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
         //开始游戏 隐藏状态面板的准备文字
-        Dispatch(AreaCode.UI, UIEvent.HIND_INFO, null);
+        Dispatch(AreaCode.UI, UIEvent.HIND_READY, null);
     }
     private void setCamera(int value)
     {
