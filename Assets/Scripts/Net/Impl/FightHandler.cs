@@ -14,7 +14,6 @@ public class FightHandler : HandlerBase
         {
             case FightCode.SHUFFLE:
                 refreshMahjongPosition(value as FightRoomDto);
-                Dispatch(AreaCode.UI, UIEvent.REFRESH_MAHJONG_POSITION, null);
                 break;
             case FightCode.LEAVE_BRO:
                 playerLeave((int)value);
@@ -23,29 +22,15 @@ public class FightHandler : HandlerBase
                 Dispatch(AreaCode.UI, UIEvent.READY_THROW, value as FightRoomDto);
                 break;
             case FightCode.THROW_THE_DICE:
-                Dispatch(AreaCode.UI, UIEvent.THROW_THE_DICE, (value as FightRoomDto).dice);
+                Dispatch(AreaCode.UI, UIEvent.THROW_THE_DICE, value as FightRoomDto);
                 break;
-            //    case FightCode.GET_CARD_SRES:
-            //        getCards(value as List<CardDto>);
-            //        break;
-            //    case FightCode.TURN_GRAB_BRO:
-            //        turnGrabBro((int)value);
-            //        break;
-            //    case FightCode.GRAB_LANDLORD_BRO:
-            //        grabLandlordBro(value as GrabDto);
-            //        break;
-            //    case FightCode.TURN_DEAL_BRO:
-            //        turnDealBro((int)value);
-            //        break;
-            //    case FightCode.DEAL_BRO:
-            //        dealBro(value as DealDto);
-            //        break;
-            //    case FightCode.DEAL_SRES:
-            //        dealResponse((int)value);
-            //        break;
-            //    case FightCode.OVER_BRO:
-            //        overBro(value as OverDto);
-            //        break;
+            case FightCode.INITIAL_DRAW:
+                Dispatch(AreaCode.UI, UIEvent.INITIAL_DRAW, value as FightRoomDto);
+                break;
+            case FightCode.INITIAL_DRAW_FINISH:
+                Dispatch(AreaCode.UI, UIEvent.INITIAL_DRAW_ONE, value as FightRoomDto);
+                break;
+
             default:
                 break;
         }
@@ -78,24 +63,9 @@ public class FightHandler : HandlerBase
             Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/MusicEx_Lose");
         }
         //显示结束面板
-        Dispatch(AreaCode.UI, UIEvent.SHOW_OVER_PANEL, dto);
+        //Dispatch(AreaCode.UI, UIEvent.SHOW_OVER_PANEL, dto);
     }
 
-    /// <summary>
-    /// 出牌响应
-    /// </summary>
-    /// <param name=""></param>
-    private void dealResponse(int result)
-    {
-        //if (result == -1)
-        //{
-        //    //玩家出的牌管不上上一个玩家出的牌
-        //    PromptMsg promptMsg = new PromptMsg("玩家出的牌管不上上一个玩家出的牌", Color.red);
-        //    Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
-        //    //重新显示出牌按钮
-        //    Dispatch(AreaCode.UI, UIEvent.SHOW_DEAL_BUTTON, true);
-        //}
-    }
 
     /// <summary>
     /// 同步出牌
@@ -103,22 +73,7 @@ public class FightHandler : HandlerBase
     /// <param name="dto"></param>
     private void dealBro(DealDto dto)
     {
-        //移除出完的手牌
-        //int eventCode = -1;
-        //if (dto.UserId == Models.GameModel.MatchRoomDto.LeftId)
-        //{
-        //    eventCode = CharacterEvent.REMOVE_LEFT_CARD;
-        //}
-        //else if (dto.UserId == Models.GameModel.MatchRoomDto.RightId)
-        //{
-        //    eventCode = CharacterEvent.REMOVE_RIGHT_CARD;
-        //}
-        //else if (dto.UserId == Models.GameModel.UserDto.Id)
-        //{
-        //    eventCode = CharacterEvent.REMOVE_MY_CARD;
-        //}
-        //Dispatch(AreaCode.CHARACTER, eventCode, dto.RemainCardList);
-        //显示到桌面上
+
         Dispatch(AreaCode.CHARACTER, CharacterEvent.UPDATE_SHOW_DESK, dto.SelectCardList);
         //播放出牌音效
         playDealAudio(dto.Type, dto.Weight);
@@ -188,7 +143,7 @@ public class FightHandler : HandlerBase
     private void grabLandlordBro(GrabDto dto)
     {
         //更改UI的身份显示
-        Dispatch(AreaCode.UI, UIEvent.PLAYER_CHANGE_IDENTITY, dto.UserId);
+        //Dispatch(AreaCode.UI, UIEvent.PLAYER_CHANGE_IDENTITY, dto.UserId);
         //播放抢地主的声音
         Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/Woman_Order");
         //显示三张底牌

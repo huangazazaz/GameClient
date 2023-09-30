@@ -126,33 +126,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2016}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2702}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 3942}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 3946}
     - Class: 114
-      Script: {instanceID: 5058}
+      Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 5614}
+      Script: {instanceID: 5382}
     - Class: 114
-      Script: {instanceID: 5766}
+      Script: {instanceID: 5618}
     - Class: 114
-      Script: {instanceID: 6082}
+      Script: {instanceID: 5770}
     - Class: 114
-      Script: {instanceID: 6410}
+      Script: {instanceID: 6086}
     - Class: 114
-      Script: {instanceID: 6876}
+      Script: {instanceID: 6414}
     - Class: 114
-      Script: {instanceID: 7888}
+      Script: {instanceID: 6880}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,35 +197,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2678}
+      Script: {instanceID: 2680}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 4136}
+      Script: {instanceID: 4140}
     - Class: 114
-      Script: {instanceID: 4934}
+      Script: {instanceID: 4938}
     - Class: 114
-      Script: {instanceID: 4986}
+      Script: {instanceID: 4990}
     - Class: 114
-      Script: {instanceID: 5206}
+      Script: {instanceID: 5210}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5382}
     - Class: 114
-      Script: {instanceID: 5614}
+      Script: {instanceID: 5618}
     - Class: 114
-      Script: {instanceID: 6082}
+      Script: {instanceID: 6086}
     - Class: 114
-      Script: {instanceID: 6332}
+      Script: {instanceID: 6336}
     - Class: 114
-      Script: {instanceID: 6410}
+      Script: {instanceID: 6414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -276,47 +276,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2178}
+      Script: {instanceID: 2180}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2806}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3186}
+      Script: {instanceID: 3190}
     - Class: 114
-      Script: {instanceID: 3262}
+      Script: {instanceID: 3266}
     - Class: 114
-      Script: {instanceID: 3916}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 3986}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4020}
+      Script: {instanceID: 4024}
     - Class: 114
-      Script: {instanceID: 4082}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 4096}
+      Script: {instanceID: 4100}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 4872}
+      Script: {instanceID: 4876}
     - Class: 114
-      Script: {instanceID: 5058}
+      Script: {instanceID: 5062}
     - Class: 114
-      Script: {instanceID: 5078}
+      Script: {instanceID: 5082}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5382}
     - Class: 114
-      Script: {instanceID: 5614}
+      Script: {instanceID: 5618}
     - Class: 114
-      Script: {instanceID: 5766}
+      Script: {instanceID: 5770}
     - Class: 114
-      Script: {instanceID: 6082}
+      Script: {instanceID: 6086}
     - Class: 114
-      Script: {instanceID: 6410}
+      Script: {instanceID: 6414}
     - Class: 114
-      Script: {instanceID: 7264}
+      Script: {instanceID: 7268}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -416,6 +416,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ControlPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -584,6 +590,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: Assets.Scripts.UI.Msg
+    className: ControlPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1526,18 +1538,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ControlPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: Assets.Scripts.UI.Msg
-    className: ControlPanel
   platform: 19
   scenePathNames:
   - Assets/Scenes/LoginSence.unity

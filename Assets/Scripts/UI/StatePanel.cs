@@ -1,6 +1,8 @@
+using Protocol.Code;
 using Protocol.Dto;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using System.Xml.Linq;
 using TMPro;
 using Unity.VisualScripting;
@@ -51,7 +53,7 @@ public class StatePanel : UIBase
     }
     private void Awake()
     {
-        Bind(UIEvent.THROW_THE_DICE, UIEvent.SET_INFORMATION, UIEvent.SET_CAMERA);
+        Bind(UIEvent.THROW_THE_DICE, UIEvent.SET_INFORMATION, UIEvent.SET_CAMERA, UIEvent.INITIAL_DRAW_ONE);
     }
 
     public override void Execute(int eventCode, object message)
@@ -59,7 +61,11 @@ public class StatePanel : UIBase
         switch (eventCode)
         {
             case UIEvent.THROW_THE_DICE:
-                displayDice(message as int[]);
+                displayDice(message as FightRoomDto);
+                break;
+            case UIEvent.INITIAL_DRAW_ONE:
+                dice1.GameObject().SetActive(false);
+                dice2.GameObject().SetActive(false);
                 break;
             case UIEvent.SET_CAMERA:
                 {
@@ -168,7 +174,7 @@ public class StatePanel : UIBase
         }
     }
 
-    void displayDice(int[] dice)
+    void displayDice(FightRoomDto dto)
     {
 
         promptMsg.Change("骰子的点数为", Color.gray);
@@ -177,8 +183,19 @@ public class StatePanel : UIBase
         dice1.gameObject.SetActive(true);
         dice2.gameObject.SetActive(true);
 
-        dice1.sprite = Resources.Load<Sprite>("UI/dice" + dice[0]);
-        dice2.sprite = Resources.Load<Sprite>("UI/dice" + dice[1]);
+        dice1.sprite = Resources.Load<Sprite>("UI/dice" + dto.dice[0]);
+        dice2.sprite = Resources.Load<Sprite>("UI/dice" + dto.dice[1]);
+
+        if (ind == dto.dealer)
+        {
+            SocketMsg socketMsg = new SocketMsg();
+            socketMsg.Change(OpCode.FIGHT, FightCode.INITIAL_DRAW_START, dto);
+            Dispatch(AreaCode.NET, 0, socketMsg);
+        }
+
+        //Thread.Sleep(1000);
+        //dice1.gameObject.SetActive(false);
+        //dice2.gameObject.SetActive(false);
     }
 
 }

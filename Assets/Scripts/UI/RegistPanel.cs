@@ -20,6 +20,7 @@ public class RegistPanel : UIBase
         {
             case UIEvent.REGIST_PANEL_ACTIVE:
                 setPanelActive((bool)message);
+                inputAccount.ActivateInputField();
                 break;
             default:
                 break;
@@ -47,6 +48,7 @@ public class RegistPanel : UIBase
         backBtn.onClick.AddListener(closeClick);
         registerBtn.onClick.AddListener(registClick);
 
+        inputAccount.ActivateInputField();
         promptMsg = new PromptMsg();
         socketMsg = new SocketMsg();
 
@@ -102,6 +104,35 @@ public class RegistPanel : UIBase
         //socketMsg.SubCode = AccountCode.REGIST_CREQ;
         //socketMsg.Value = dto;
         Dispatch(AreaCode.NET, 0, socketMsg);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (inputAccount.isFocused)
+            {
+                inputPassword.ActivateInputField();
+            }
+            else if (inputPassword.isFocused)
+            {
+                inputConfirm.ActivateInputField();
+            }
+            else
+            {
+                inputAccount.ActivateInputField();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            registClick();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            closeClick();
+        }
+
     }
 
     private void closeClick()

@@ -20,6 +20,8 @@ public class MatchPanel : UIBase
         switch (eventCode)
         {
             case UIEvent.SHOW_ENTER_ROOM_BUTTON:
+                txtDes.gameObject.SetActive(false);
+                txtDes1.gameObject.SetActive(true);
                 btnEnter.gameObject.SetActive(true);
                 break;
             default:
@@ -30,6 +32,7 @@ public class MatchPanel : UIBase
     private Button btnMatch;
     private Image imgBg;
     private Text txtDes;
+    private Text txtDes1;
     private Button btnCancel;
     private Button btnEnter;
 
@@ -41,6 +44,7 @@ public class MatchPanel : UIBase
         btnMatch = transform.Find("btnMatch").GetComponent<Button>();
         imgBg = transform.Find("imgBg").GetComponent<Image>();
         txtDes = transform.Find("txtDes").GetComponent<Text>();
+        txtDes1 = transform.Find("txtDes1").GetComponent<Text>();
         btnCancel = transform.Find("btnCancel").GetComponent<Button>();
         btnEnter = transform.Find("btnEnter").GetComponent<Button>();
 
@@ -53,6 +57,7 @@ public class MatchPanel : UIBase
         //默认状态
         setObjectsActive(false);
         btnEnter.gameObject.SetActive(false);
+        txtDes1.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

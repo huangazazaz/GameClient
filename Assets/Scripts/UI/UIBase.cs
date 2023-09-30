@@ -54,7 +54,10 @@ public class UIBase : MonoBase
     /// <param name="active"></param>
     protected void setPanelActive(bool active)
     {
+
         gameObject.SetActive(active);
+
+
     }
 
 }

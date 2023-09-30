@@ -25,7 +25,7 @@ public class ChatHandler : HandlerBase
                     msg.Text = text;
 
                     //显示文字
-                    Dispatch(AreaCode.UI, UIEvent.PLAYER_CHAT, msg);
+                    //Dispatch(AreaCode.UI, UIEvent.PLAYER_CHAT, msg);
                     //播放声音
                     Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Chat/Chat_" + chatType);
                     break;

@@ -20,6 +20,7 @@ public class StartPanel : UIBase
         {
             case UIEvent.START_PANEL_ACTIVE:
                 setPanelActive((bool)message);
+                inputAccount.ActivateInputField();
                 break;
             default:
                 break;
@@ -44,9 +45,11 @@ public class StartPanel : UIBase
 
         btnLogin.onClick.AddListener(loginClick);
         btnClose.onClick.AddListener(closeClick);
+        inputAccount.ActivateInputField();
 
         promptMsg = new PromptMsg();
         socketMsg = new SocketMsg();
+
 
         //面板需要默认隐藏
         setPanelActive(false);
@@ -89,7 +92,29 @@ public class StartPanel : UIBase
         socketMsg.Change(OpCode.ACCOUNT, AccountCode.LOGIN, dto);
         Dispatch(AreaCode.NET, 0, socketMsg);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (inputAccount.isFocused)
+            {
+                inputPassword.ActivateInputField();
+            }
+            else
+            {
+                inputAccount.ActivateInputField();
+            }
+        }
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            loginClick();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            closeClick();
+        }
+    }
     private void closeClick()
     {
         setPanelActive(false);
