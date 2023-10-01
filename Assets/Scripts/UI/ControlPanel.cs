@@ -76,14 +76,135 @@ public class ControlPanel : UIBase
         for (int i = 1; i <= 14; i++)
         {
             MahjongBtns.Add(i, transform.Find("Mahjong" + i).GetComponent<Button>());
-            MahjongBtns[i].onClick.AddListener(ChooseClick);
+        }
+        MahjongBtns[1].onClick.AddListener(ChooseClick1);
+        MahjongBtns[2].onClick.AddListener(ChooseClick2);
+        MahjongBtns[3].onClick.AddListener(ChooseClick3);
+        MahjongBtns[4].onClick.AddListener(ChooseClick4);
+        MahjongBtns[5].onClick.AddListener(ChooseClick5);
+        MahjongBtns[6].onClick.AddListener(ChooseClick6);
+        MahjongBtns[7].onClick.AddListener(ChooseClick7);
+        MahjongBtns[8].onClick.AddListener(ChooseClick8);
+        MahjongBtns[9].onClick.AddListener(ChooseClick9);
+        MahjongBtns[10].onClick.AddListener(ChooseClick10);
+        MahjongBtns[11].onClick.AddListener(ChooseClick11);
+        MahjongBtns[12].onClick.AddListener(ChooseClick12);
+        MahjongBtns[13].onClick.AddListener(ChooseClick13);
+        MahjongBtns[14].onClick.AddListener(ChooseClick14);
+        for (int i = 1; i <= 14; i++)
+        {
             MahjongBtns[i].gameObject.SetActive(false);
         }
+        checks = new bool[14];
+        for (int i = 0; i < 14; i++)
+        {
+            checks[i] = false;
+        }
     }
-    void ChooseClick()
+
+    bool[] checks;
+
+
+    void stateChange(int ind)
     {
-        this.transform.position = this.transform.position + new Vector3(0, (float)20, 0);
+        for (int i = 1; i <= 14; i++)
+        {
+            if (checks[i - 1])
+            {
+                if (i == ind)
+                {
+                    checks[i - 1] = false;
+                    stateInactive(MahjongBtns[i].gameObject);
+                    return;
+                    //TODO 出牌
+                }
+                else
+                {
+                    checks[i - 1] = false;
+                    checks[ind - 1] = true;
+                    stateActive(MahjongBtns[ind].gameObject);
+                    stateInactive(MahjongBtns[i].gameObject);
+                    return;
+                }
+            }
+        }
+        checks[ind - 1] = true;
+        stateActive(MahjongBtns[ind].gameObject);
     }
+
+    void ChooseClick1()
+    {
+        stateChange(1);
+    }
+
+    void ChooseClick2()
+    {
+        stateChange(2);
+    }
+    void ChooseClick3()
+    {
+        stateChange(3);
+    }
+
+    void ChooseClick4()
+    {
+        stateChange(4);
+    }
+    void ChooseClick5()
+    {
+        stateChange(5);
+    }
+
+    void ChooseClick6()
+    {
+        stateChange(6);
+    }
+    void ChooseClick7()
+    {
+        stateChange(7);
+    }
+
+    void ChooseClick8()
+    {
+        stateChange(8);
+    }
+    void ChooseClick9()
+    {
+        stateChange(9);
+    }
+
+    void ChooseClick10()
+    {
+        stateChange(10);
+    }
+    void ChooseClick11()
+    {
+        stateChange(11);
+    }
+
+    void ChooseClick12()
+    {
+        stateChange(12);
+    }
+    void ChooseClick13()
+    {
+        stateChange(13);
+    }
+
+    void ChooseClick14()
+    {
+        stateChange(14);
+    }
+
+    void stateActive(GameObject obj)
+    {
+        obj.transform.position = obj.transform.position + new Vector3(0, 20, 0);
+    }
+    void stateInactive(GameObject obj)
+    {
+        obj.transform.position = obj.transform.position + new Vector3(0, -20, 0);
+    }
+
     public override void OnDestroy()
     {
         base.OnDestroy();
@@ -120,7 +241,7 @@ public class ControlPanel : UIBase
         else
         {
             MahjongBtns[14].gameObject.gameObject.SetActive(true);
-            MahjongBtns[14].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + dto.drawMahjong[index].Substring(0, dto.drawMahjong[index].Length));
+            MahjongBtns[14].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + dto.drawMahjong[index].Substring(0, dto.drawMahjong[index].Length - 1));
         }
     }
 }
