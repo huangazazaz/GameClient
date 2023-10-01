@@ -115,7 +115,8 @@ public class MatchPanel : UIBase
         //向服务器发起离开匹配的请求
         socketMsg.Change(OpCode.MATCH, MatchCode.LEAVE_CREQ, null);
         Dispatch(AreaCode.NET, 0, socketMsg);
-
+        txtDes1.gameObject.SetActive(false);
+        btnEnter.gameObject.SetActive(false);
         setObjectsActive(false);
 
         //按钮隐显示

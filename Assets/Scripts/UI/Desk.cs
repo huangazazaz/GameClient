@@ -13,19 +13,19 @@ public class Desk : UIBase
 {
 
     Dictionary<string, GameObject> nameMahjong;
-    GameObject table = null;
+    GameObject table;
     Dictionary<int, string> MahjongOrder;
 
     private void Awake()
     {
-        Bind(UIEvent.REFRESH_MAHJONG_POSITION, UIEvent.INITIAL_DRAW, UIEvent.INITIAL_DRAW_ONE);
+        Bind(UIEvent.REFRESH_MAHJONG_POSITION, UIEvent.INITIAL_DRAW, UIEvent.INITIAL_DRAW_FINISH, UIEvent.DRAW);
     }
 
     public override void Execute(int eventCode, object message)
     {
         switch (eventCode)
         {
-            case UIEvent.REFRESH_MAHJONG_POSITION or UIEvent.INITIAL_DRAW_ONE:
+            case UIEvent.REFRESH_MAHJONG_POSITION or UIEvent.INITIAL_DRAW_FINISH or UIEvent.DRAW:
                 RefreshPosition(message as FightRoomDto);
                 break;
             case UIEvent.INITIAL_DRAW:
@@ -61,6 +61,8 @@ public class Desk : UIBase
 
         }
     }
+
+
 
     void RefreshPosition(FightRoomDto dto)
     {
@@ -108,9 +110,33 @@ public class Desk : UIBase
         }
 
 
-
         for (int i = 1; i <= 4; i++)
         {
+            if (dto.drawMahjong[i] != "")
+            {
+                switch (i)
+                {
+                    case 1:
+                        nameMahjong[dto.drawMahjong[i]].transform.position = table.transform.position + new Vector3(8, 0, -11);
+                        nameMahjong[dto.drawMahjong[i]].transform.rotation = Quaternion.Euler(-90, 90, 0);
+                        break;
+                    case 2:
+                        nameMahjong[dto.drawMahjong[i]].transform.position = table.transform.position + new Vector3(11, 0, 8);
+                        nameMahjong[dto.drawMahjong[i]].transform.rotation = Quaternion.Euler(-90, 0, 0);
+                        break;
+                    case 3:
+                        nameMahjong[dto.drawMahjong[i]].transform.position = table.transform.position + new Vector3(-8, 0, 11);
+                        nameMahjong[dto.drawMahjong[i]].transform.rotation = Quaternion.Euler(-90, 0, -90);
+                        break;
+                    case 4:
+                        nameMahjong[dto.drawMahjong[i]].transform.position = table.transform.position + new Vector3(-11, 0, -8);
+                        nameMahjong[dto.drawMahjong[i]].transform.rotation = Quaternion.Euler(-90, 180, 0);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
             if (dto.SeatHandMahjongs[i].Count > 0)
             {
                 switch (i)

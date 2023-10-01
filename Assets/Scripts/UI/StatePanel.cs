@@ -1,3 +1,4 @@
+using AhpilyServer;
 using Protocol.Code;
 using Protocol.Dto;
 using System.Collections;
@@ -53,7 +54,7 @@ public class StatePanel : UIBase
     }
     private void Awake()
     {
-        Bind(UIEvent.THROW_THE_DICE, UIEvent.SET_INFORMATION, UIEvent.SET_CAMERA, UIEvent.INITIAL_DRAW_ONE);
+        Bind(UIEvent.THROW_THE_DICE, UIEvent.SET_INFORMATION, UIEvent.SET_CAMERA, UIEvent.INITIAL_DRAW_FINISH);
     }
 
     public override void Execute(int eventCode, object message)
@@ -63,7 +64,7 @@ public class StatePanel : UIBase
             case UIEvent.THROW_THE_DICE:
                 displayDice(message as FightRoomDto);
                 break;
-            case UIEvent.INITIAL_DRAW_ONE:
+            case UIEvent.INITIAL_DRAW_FINISH:
                 dice1.GameObject().SetActive(false);
                 dice2.GameObject().SetActive(false);
                 break;

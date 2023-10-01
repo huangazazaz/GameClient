@@ -126,33 +126,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2016}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 3084}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 5038}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 5590}
     - Class: 114
-      Script: {instanceID: 3946}
+      Script: {instanceID: 5740}
     - Class: 114
-      Script: {instanceID: 4656}
+      Script: {instanceID: 6056}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 5382}
+      Script: {instanceID: 6848}
     - Class: 114
-      Script: {instanceID: 5618}
+      Script: {instanceID: 7858}
     - Class: 114
-      Script: {instanceID: 5770}
+      Script: {instanceID: 7862}
     - Class: 114
-      Script: {instanceID: 6086}
+      Script: {instanceID: 7866}
     - Class: 114
-      Script: {instanceID: 6414}
+      Script: {instanceID: 7870}
     - Class: 114
-      Script: {instanceID: 6880}
+      Script: {instanceID: 7882}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,35 +197,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2680}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 3084}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 4120}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 4916}
     - Class: 114
-      Script: {instanceID: 4140}
+      Script: {instanceID: 4966}
     - Class: 114
-      Script: {instanceID: 4938}
+      Script: {instanceID: 5184}
     - Class: 114
-      Script: {instanceID: 4990}
+      Script: {instanceID: 5590}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 6056}
     - Class: 114
-      Script: {instanceID: 5382}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 5618}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 6086}
+      Script: {instanceID: 7858}
     - Class: 114
-      Script: {instanceID: 6336}
+      Script: {instanceID: 7910}
     - Class: 114
-      Script: {instanceID: 6414}
+      Script: {instanceID: 7922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -276,47 +276,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2180}
+      Script: {instanceID: 2178}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3084}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3902}
     - Class: 114
-      Script: {instanceID: 3920}
+      Script: {instanceID: 3970}
     - Class: 114
-      Script: {instanceID: 3990}
+      Script: {instanceID: 4004}
     - Class: 114
-      Script: {instanceID: 4024}
+      Script: {instanceID: 4066}
     - Class: 114
-      Script: {instanceID: 4086}
+      Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4100}
+      Script: {instanceID: 4332}
     - Class: 114
-      Script: {instanceID: 4352}
+      Script: {instanceID: 4854}
     - Class: 114
-      Script: {instanceID: 4876}
+      Script: {instanceID: 5038}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5590}
     - Class: 114
-      Script: {instanceID: 5082}
+      Script: {instanceID: 5740}
     - Class: 114
-      Script: {instanceID: 5382}
+      Script: {instanceID: 6056}
     - Class: 114
-      Script: {instanceID: 5618}
+      Script: {instanceID: 6382}
     - Class: 114
-      Script: {instanceID: 5770}
+      Script: {instanceID: 7236}
     - Class: 114
-      Script: {instanceID: 6086}
+      Script: {instanceID: 7858}
     - Class: 114
-      Script: {instanceID: 6414}
+      Script: {instanceID: 7890}
     - Class: 114
-      Script: {instanceID: 7268}
+      Script: {instanceID: 7902}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -419,12 +419,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ControlPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnterMessageListener
@@ -484,12 +478,6 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: NetManager
-  - hash:
-      serializedVersion: 2
       Hash: 848c5c3c98557fc2f2199206a7eaa69a
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -524,18 +512,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_TextSelector_A
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: InfoPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StatePanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -593,12 +569,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: Assets.Scripts.UI.Msg
-    className: ControlPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
@@ -638,12 +608,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseDownMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StartPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -706,12 +670,6 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MatchPanel
-  - hash:
-      serializedVersion: 2
       Hash: 995ded12fd23487c35be69ad8c37f000
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -766,12 +724,6 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UIBase
-  - hash:
-      serializedVersion: 2
       Hash: 8a64c0f8522bcdc3b5511041fb34cc1e
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -794,12 +746,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MsgCenter
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Desk
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -932,12 +878,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_TextInfoDebugTool
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ReadyPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1074,12 +1014,6 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RegistPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
     namespaceName: TMPro
     className: TMP_DigitValidator
   - hash:
@@ -1112,12 +1046,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: cd36a73c3f2eefbfff86e2355dd67542
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PromptPanel
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -1538,6 +1466,78 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: cd36a73c3f2eefbfff86e2355dd67542
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PromptPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ReadyPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ControlPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Desk
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UIBase
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StatePanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: Assets.Scripts.UI.Msg
+    className: ControlPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StartPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: NetManager
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RegistPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InfoPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MatchPanel
   platform: 19
   scenePathNames:
   - Assets/Scenes/LoginSence.unity

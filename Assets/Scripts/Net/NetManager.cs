@@ -11,7 +11,7 @@ public class NetManager : ManagerBase
 {
     public static NetManager Instance = null;
 
-    private ClientPeer client = new ClientPeer("127.0.0.1", 6666);
+    private ClientPeer client = new ClientPeer("10.24.253.72", 6666);
 
     private void Start()
     {

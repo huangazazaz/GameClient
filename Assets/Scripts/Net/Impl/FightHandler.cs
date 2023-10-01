@@ -1,4 +1,5 @@
-﻿using Protocol.Code;
+﻿using AhpilyServer;
+using Protocol.Code;
 using Protocol.Constant;
 using Protocol.Dto;
 using Protocol.Dto.Fight;
@@ -8,6 +9,7 @@ using UnityEngine;
 
 public class FightHandler : HandlerBase
 {
+    SocketMsg socketMsg = new SocketMsg();
     public override void OnReceive(int subCode, object value)
     {
         switch (subCode)
@@ -28,9 +30,13 @@ public class FightHandler : HandlerBase
                 Dispatch(AreaCode.UI, UIEvent.INITIAL_DRAW, value as FightRoomDto);
                 break;
             case FightCode.INITIAL_DRAW_FINISH:
-                Dispatch(AreaCode.UI, UIEvent.INITIAL_DRAW_ONE, value as FightRoomDto);
+                Dispatch(AreaCode.UI, UIEvent.INITIAL_DRAW_FINISH, value as FightRoomDto);
+                socketMsg.Change(OpCode.FIGHT, FightCode.DRAW, value as FightRoomDto);
+                Dispatch(AreaCode.NET, 0, socketMsg);
                 break;
-
+            case FightCode.DRAW:
+                Dispatch(AreaCode.UI, UIEvent.DRAW, value as FightRoomDto);
+                break;
             default:
                 break;
         }

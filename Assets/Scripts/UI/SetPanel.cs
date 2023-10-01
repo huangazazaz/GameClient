@@ -13,7 +13,6 @@ public class SetPanel : UIBase
     private Toggle togAudio;
     private Text txtVolume;
     private Slider sldVolume;
-    private Button btnQuit;
 
     void Start()
     {
@@ -24,11 +23,9 @@ public class SetPanel : UIBase
         togAudio = transform.Find("togAudio").GetComponent<Toggle>();
         txtVolume = transform.Find("txtVolume").GetComponent<Text>();
         sldVolume = transform.Find("sldVolume").GetComponent<Slider>();
-        btnQuit = transform.Find("btnQuit").GetComponent<Button>();
 
         btnSet.onClick.AddListener(setClick);
         btnClose.onClick.AddListener(closeClick);
-        btnQuit.onClick.AddListener(quitClick);
         togAudio.onValueChanged.AddListener(audioValueChanged);
         sldVolume.onValueChanged.AddListener(volumeValueChanged);
         audioValueChanged(false);
@@ -43,7 +40,6 @@ public class SetPanel : UIBase
 
         btnSet.onClick.RemoveListener(setClick);
         btnClose.onClick.RemoveListener(closeClick);
-        btnQuit.onClick.RemoveListener(quitClick);
         togAudio.onValueChanged.RemoveListener(audioValueChanged);
         sldVolume.onValueChanged.RemoveListener(volumeValueChanged);
     }
@@ -54,7 +50,6 @@ public class SetPanel : UIBase
         btnClose.gameObject.SetActive(active);
         togAudio.gameObject.SetActive(active);
         sldVolume.gameObject.SetActive(active);
-        btnQuit.gameObject.SetActive(active);
         txtAudio.gameObject.SetActive(active);
         txtVolume.gameObject.SetActive(active);
     }
@@ -68,11 +63,6 @@ public class SetPanel : UIBase
     private void closeClick()
     {
         setObjectsActive(false);
-    }
-
-    private void quitClick()
-    {
-        Application.Quit();
     }
 
     /// <summary>

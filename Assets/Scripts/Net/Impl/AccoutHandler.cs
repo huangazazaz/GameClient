@@ -83,6 +83,7 @@ public class AccoutHandler : HandlerBase
             case 0:
                 promptMsg.Change("注册成功", Color.green);
                 Dispatch(AreaCode.UI, UIEvent.PROMPT_MSG, promptMsg);
+                Dispatch(AreaCode.UI, UIEvent.REGISTER_SUCCESS_R, null);
                 break;
             case -1:
                 promptMsg.Change("账号已经存在", Color.red);

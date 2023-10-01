@@ -11,7 +11,7 @@ public class RegistPanel : UIBase
 {
     private void Awake()
     {
-        Bind(UIEvent.REGIST_PANEL_ACTIVE);
+        Bind(UIEvent.REGIST_PANEL_ACTIVE, UIEvent.REGISTER_SUCCESS_R);
     }
 
     public override void Execute(int eventCode, object message)
@@ -21,6 +21,13 @@ public class RegistPanel : UIBase
             case UIEvent.REGIST_PANEL_ACTIVE:
                 setPanelActive((bool)message);
                 inputAccount.ActivateInputField();
+                break;
+            case UIEvent.REGISTER_SUCCESS_R:
+                Dispatch(AreaCode.UI, UIEvent.REGISTER_SUCCESS_L, inputAccount.text);
+                inputAccount.text = "";
+                inputPassword.text = "";
+                inputConfirm.text = "";
+                setPanelActive(false);
                 break;
             default:
                 break;

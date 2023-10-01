@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/LoginSence.unity
+- path: Assets/Scenes/LobbySence.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -11,7 +11,7 @@ public class StartPanel : UIBase
 
     private void Awake()
     {
-        Bind(UIEvent.START_PANEL_ACTIVE);
+        Bind(UIEvent.START_PANEL_ACTIVE, UIEvent.REGISTER_SUCCESS_L);
     }
 
     public override void Execute(int eventCode, object message)
@@ -21,6 +21,11 @@ public class StartPanel : UIBase
             case UIEvent.START_PANEL_ACTIVE:
                 setPanelActive((bool)message);
                 inputAccount.ActivateInputField();
+                break;
+            case UIEvent.REGISTER_SUCCESS_L:
+                setPanelActive(true);
+                inputAccount.text = message as string;
+                inputPassword.ActivateInputField();
                 break;
             default:
                 break;

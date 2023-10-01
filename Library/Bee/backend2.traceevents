@@ -1,144 +1,114 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1696004895545872, "dur":26526, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895572406, "dur":134, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895572572, "dur":587, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895573421, "dur":67, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/level1" }}
-,{ "pid":12345, "tid":0, "ts":1696004895573639, "dur":68, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/resources.resource" }}
-,{ "pid":12345, "tid":0, "ts":1696004895573793, "dur":58, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":0, "ts":1696004895573920, "dur":151, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/sharedassets1.assets" }}
-,{ "pid":12345, "tid":0, "ts":1696004895574076, "dur":88, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/sharedassets1.assets.resS" }}
-,{ "pid":12345, "tid":0, "ts":1696004895574169, "dur":154, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/sharedassets2.assets" }}
-,{ "pid":12345, "tid":0, "ts":1696004895574328, "dur":81, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/sharedassets2.assets.resS" }}
-,{ "pid":12345, "tid":0, "ts":1696004895574414, "dur":108, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/boot.config" }}
-,{ "pid":12345, "tid":0, "ts":1696004895574814, "dur":51, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895574899, "dur":118, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895575024, "dur":83, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895575112, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895575166, "dur":51, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895575460, "dur":51, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895575516, "dur":69, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895576113, "dur":53, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895576456, "dur":51, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895576941, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895577196, "dur":50, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895578207, "dur":51, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895578379, "dur":63, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895578446, "dur":55, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":0, "ts":1696004895573185, "dur":6467, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895579653, "dur":165233, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895744888, "dur":143, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895745032, "dur":121, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895745153, "dur":104, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895745384, "dur":1400, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1696004895573522, "dur":6144, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1696004895579671, "dur":3283, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1696004895582979, "dur":186, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1696004895583180, "dur":283, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1696004895583472, "dur":181, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":1, "ts":1696004895583810, "dur":598, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":1, "ts":1696004895584412, "dur":342, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1696004895584758, "dur":462, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1696004895585253, "dur":138, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playerdfc78660-inputdata.json" }}
-,{ "pid":12345, "tid":1, "ts":1696004895583179, "dur":2272, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1696004895741371, "dur":58, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1696004895586257, "dur":155227, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1696004895743640, "dur":360, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1696004895743638, "dur":363, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1696004895744026, "dur":813, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/OOADMahjong_Data/boot.config" }}
-,{ "pid":12345, "tid":2, "ts":1696004895573629, "dur":6080, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1696004895579714, "dur":302, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1696004895580016, "dur":2967, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1696004895582986, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1696004895583207, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1696004895583406, "dur":80, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":2, "ts":1696004895583488, "dur":876, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":2, "ts":1696004895583487, "dur":878, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":2, "ts":1696004895584802, "dur":2714, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/OOADMahjong_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":2, "ts":1696004895587529, "dur":157362, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1696004895573570, "dur":6108, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1696004895579687, "dur":379, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1696004895580066, "dur":2893, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1696004895582968, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":3, "ts":1696004895583036, "dur":122, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1696004895583171, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":3, "ts":1696004895583421, "dur":97, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":3, "ts":1696004895584008, "dur":160874, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1696004895573615, "dur":6080, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1696004895579699, "dur":325, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1696004895580024, "dur":2934, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1696004895582979, "dur":58, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":4, "ts":1696004895582968, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":4, "ts":1696004895583038, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1696004895583253, "dur":129, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":4, "ts":1696004895583413, "dur":998, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":4, "ts":1696004895583412, "dur":1000, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":4, "ts":1696004895584430, "dur":160554, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1696004895573676, "dur":6048, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1696004895579730, "dur":340, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1696004895580071, "dur":2908, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1696004895582981, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":5, "ts":1696004895583043, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1696004895583175, "dur":50, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":5, "ts":1696004895583348, "dur":185, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":5, "ts":1696004895584026, "dur":160883, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1696004895573728, "dur":6013, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1696004895579747, "dur":372, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1696004895580120, "dur":2856, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1696004895582977, "dur":183, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":6, "ts":1696004895583317, "dur":77, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":6, "ts":1696004895583422, "dur":1392, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":6, "ts":1696004895583421, "dur":1394, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":6, "ts":1696004895584839, "dur":160068, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1696004895573782, "dur":5975, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1696004895579763, "dur":361, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1696004895580124, "dur":2840, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1696004895582969, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":7, "ts":1696004895583058, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":7, "ts":1696004895583230, "dur":130, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":7, "ts":1696004895583220, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":7, "ts":1696004895583386, "dur":66, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":7, "ts":1696004895583454, "dur":981, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":7, "ts":1696004895583453, "dur":982, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":7, "ts":1696004895584453, "dur":160484, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1696004895573820, "dur":5954, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1696004895579781, "dur":321, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1696004895580103, "dur":2895, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1696004895583013, "dur":162, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
-,{ "pid":12345, "tid":8, "ts":1696004895582998, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1696004895583345, "dur":155, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":8, "ts":1696004895584012, "dur":160872, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1696004895573870, "dur":5925, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1696004895579801, "dur":305, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1696004895580107, "dur":2879, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1696004895582990, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":9, "ts":1696004895583205, "dur":77, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\web.config" }}
-,{ "pid":12345, "tid":9, "ts":1696004895583188, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":9, "ts":1696004895583343, "dur":68, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":9, "ts":1696004895583430, "dur":113, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/AhpilyServer.dll" }}
-,{ "pid":12345, "tid":9, "ts":1696004895584021, "dur":160859, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1696004895573926, "dur":5887, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1696004895579813, "dur":3153, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1696004895582990, "dur":145, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
-,{ "pid":12345, "tid":10, "ts":1696004895582968, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":10, "ts":1696004895583162, "dur":52, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":10, "ts":1696004895583418, "dur":756, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":10, "ts":1696004895583417, "dur":758, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":10, "ts":1696004895584198, "dur":160708, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1696004895573987, "dur":5841, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1696004895579829, "dur":3132, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1696004895582978, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":11, "ts":1696004895583031, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1696004895583232, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":11, "ts":1696004895583350, "dur":122, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":11, "ts":1696004895583474, "dur":910, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":11, "ts":1696004895583473, "dur":911, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":11, "ts":1696004895584411, "dur":160481, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1696004895574028, "dur":5810, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1696004895579838, "dur":3118, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1696004895582976, "dur":180, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1696004895583257, "dur":77, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":12, "ts":1696004895583445, "dur":1076, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":12, "ts":1696004895583444, "dur":1078, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":12, "ts":1696004895584541, "dur":160383, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1696004895749263, "dur":784, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1696182286452768, "dur":17134, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286469907, "dur":107, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286470045, "dur":401, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286474175, "dur":56, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":0, "ts":1696182286470466, "dur":4407, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286474874, "dur":130107, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286604982, "dur":172, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286605154, "dur":125, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286605316, "dur":53, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286605506, "dur":1777, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1696182286470849, "dur":4092, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696182286474946, "dur":378, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696182286475325, "dur":2616, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696182286477945, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1696182286478117, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1696182286478169, "dur":115, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696182286478307, "dur":761, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696182286478306, "dur":763, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1696182286479091, "dur":125891, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696182286470781, "dur":4139, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696182286474924, "dur":408, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696182286475332, "dur":2591, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1696182286477929, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1696182286478084, "dur":258, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1696182286478359, "dur":929, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1696182286478343, "dur":945, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":2, "ts":1696182286479315, "dur":125734, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696182286470770, "dur":4129, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696182286474907, "dur":388, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696182286475295, "dur":2579, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696182286477919, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1696182286478322, "dur":1120, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696182286478321, "dur":1122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1696182286479459, "dur":125552, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696182286470724, "dur":4161, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696182286474889, "dur":2981, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1696182286477923, "dur":277, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1696182286478211, "dur":120, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1696182286478505, "dur":821, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696182286479330, "dur":236, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1696182286479597, "dur":146, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\Playerdfc78660-inputdata.json" }}
+,{ "pid":12345, "tid":4, "ts":1696182286477922, "dur":1875, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1696182286480387, "dur":122312, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1696182286603896, "dur":215, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1696182286603895, "dur":217, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/boot.config" }}
+,{ "pid":12345, "tid":4, "ts":1696182286604130, "dur":802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/OOADMahjong_Data/boot.config" }}
+,{ "pid":12345, "tid":5, "ts":1696182286470833, "dur":4096, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696182286474933, "dur":353, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696182286475286, "dur":2586, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1696182286477918, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/app.info" }}
+,{ "pid":12345, "tid":5, "ts":1696182286478108, "dur":255, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1696182286478365, "dur":953, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696182286478364, "dur":955, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696182286479679, "dur":2150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"build/OOADMahjong_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1696182286481839, "dur":123147, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696182286470906, "dur":4049, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696182286474959, "dur":395, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696182286475354, "dur":2551, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1696182286477927, "dur":125, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1696182286477910, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1696182286478141, "dur":57, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696182286478254, "dur":181, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1696182286478929, "dur":126049, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696182286470947, "dur":4025, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696182286474978, "dur":397, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696182286475375, "dur":2513, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1696182286477893, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1696182286478243, "dur":137, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":7, "ts":1696182286478917, "dur":126070, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696182286470996, "dur":3993, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696182286474995, "dur":322, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696182286475317, "dur":2636, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1696182286477964, "dur":123, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\web.config" }}
+,{ "pid":12345, "tid":8, "ts":1696182286477954, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1696182286478169, "dur":101, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696182286478311, "dur":1167, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696182286478310, "dur":1169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1696182286479495, "dur":125504, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696182286471033, "dur":3974, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696182286475012, "dur":279, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696182286475291, "dur":2584, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696182286477918, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696182286478053, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1696182286478155, "dur":74, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696182286478249, "dur":154, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696182286478549, "dur":59, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1696182286478925, "dur":126051, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696182286471080, "dur":3941, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696182286475022, "dur":2857, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696182286477899, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1696182286478059, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1696182286478150, "dur":171, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1696182286478336, "dur":1050, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696182286478322, "dur":1065, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":10, "ts":1696182286479405, "dur":125633, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696182286471121, "dur":3915, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696182286475036, "dur":2841, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696182286477903, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1696182286478015, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1696182286478150, "dur":54, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696182286478253, "dur":168, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696182286478646, "dur":56, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1696182286478921, "dur":126063, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696182286471163, "dur":3889, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696182286475053, "dur":2827, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1696182286477903, "dur":111, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\Editer\\2022.3.8f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\web.config" }}
+,{ "pid":12345, "tid":12, "ts":1696182286477882, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":12, "ts":1696182286478154, "dur":147, "ph":"X", "name": "EmitNodeUpToDate",  "args": { "detail":"CopyFiles build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696182286478304, "dur":1093, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\Unity Hub\\unityProject\\OOADMahjong\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696182286478302, "dur":1096, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles build/OOADMahjong_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":12, "ts":1696182286479423, "dur":125601, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1696182286609936, "dur":725, "ph":"X", "name": "ProfilerWriteOutput" }
 ,
