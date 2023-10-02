@@ -24,6 +24,7 @@ public class ControlPanel : UIBase
     SocketMsg socketMsg;
     Dictionary<int, Button> MahjongBtns;
     int style = 1;
+    Dictionary<int, string> HandMahjongs;
 
 
     public override void Execute(int eventCode, object message)
@@ -44,7 +45,7 @@ public class ControlPanel : UIBase
                 break;
             case UIEvent.DRAW:
                 refresh(message as FightRoomDto);
-                //TODO
+                fightRoomDto = message as FightRoomDto;
                 break;
             case UIEvent.REFRESH_MAHJONG_POSITION or UIEvent.INITIAL_DRAW or UIEvent.INITIAL_DRAW_FINISH:
                 refresh(message as FightRoomDto);
@@ -54,7 +55,7 @@ public class ControlPanel : UIBase
                 fightRoomDto = message as FightRoomDto;
                 if (index == fightRoomDto.drawIndex[1])
                 {
-                    Thread.Sleep(500);
+                    Thread.Sleep(100);
                     socketMsg.Change(OpCode.FIGHT, FightCode.INITIAL_DRAW, message as FightRoomDto);
                     Dispatch(AreaCode.NET, 0, socketMsg);
                 }
@@ -73,8 +74,10 @@ public class ControlPanel : UIBase
         Throw.onClick.AddListener(ThrowClick);
         socketMsg = new SocketMsg();
         MahjongBtns = new Dictionary<int, Button>();
+        HandMahjongs = new Dictionary<int, string>();
         for (int i = 1; i <= 14; i++)
         {
+            HandMahjongs.Add(i, "");
             MahjongBtns.Add(i, transform.Find("Mahjong" + i).GetComponent<Button>());
         }
         MahjongBtns[1].onClick.AddListener(ChooseClick1);
@@ -111,26 +114,25 @@ public class ControlPanel : UIBase
         {
             if (checks[i - 1])
             {
+                checks[i - 1] = false;
+                stateInactive(MahjongBtns[i].gameObject);
                 if (i == ind)
                 {
-                    checks[i - 1] = false;
-                    stateInactive(MahjongBtns[i].gameObject);
+                    fightRoomDto.playMahjong = HandMahjongs[ind];
+                    socketMsg.Change(OpCode.FIGHT, FightCode.PLAY, fightRoomDto);
+                    Dispatch(AreaCode.NET, 0, socketMsg);
                     return;
-                    //TODO 出牌
                 }
                 else
                 {
-                    checks[i - 1] = false;
                     checks[ind - 1] = true;
                     stateActive(MahjongBtns[ind].gameObject);
-                    stateInactive(MahjongBtns[i].gameObject);
                     return;
                 }
             }
         }
-        checks[ind - 1] = true;
-        stateActive(MahjongBtns[ind].gameObject);
     }
+
 
     void ChooseClick1()
     {
@@ -229,6 +231,7 @@ public class ControlPanel : UIBase
         for (int j = 1; j <= dto.SeatHandMahjongs[index].Count; j++)
         {
             string name = dto.SeatHandMahjongs[index][j - 1];
+            HandMahjongs[j] = name;
             name = name.Substring(0, name.Length - 1);
             MahjongBtns[j].gameObject.SetActive(true);
             MahjongBtns[j].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + name);
@@ -240,6 +243,12 @@ public class ControlPanel : UIBase
         }
         else
         {
+            HandMahjongs[14] = dto.drawMahjong[index];
+            if (!checks[13])
+            {
+                checks[13] = true;
+                stateActive(MahjongBtns[14].gameObject);
+            }
             MahjongBtns[14].gameObject.gameObject.SetActive(true);
             MahjongBtns[14].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + dto.drawMahjong[index].Substring(0, dto.drawMahjong[index].Length - 1));
         }

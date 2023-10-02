@@ -54,26 +54,6 @@ public class FightHandler : HandlerBase
     }
 
     /// <summary>
-    /// 结束广播
-    /// </summary>
-    /// <param name="dto"></param>
-    private void overBro(OverDto dto)
-    {
-        //播放结果音效
-        if (dto.WinUIdList.Contains(Models.GameModel.Id))
-        {
-            Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/MusicEx_Win");
-        }
-        else
-        {
-            Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/MusicEx_Lose");
-        }
-        //显示结束面板
-        //Dispatch(AreaCode.UI, UIEvent.SHOW_OVER_PANEL, dto);
-    }
-
-
-    /// <summary>
     /// 同步出牌
     /// </summary>
     /// <param name="dto"></param>
@@ -131,86 +111,6 @@ public class FightHandler : HandlerBase
         Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, audioName);
     }
 
-    /// <summary>
-    /// 转换出牌
-    /// </summary>
-    /// <param name="userId">出牌者id</param>
-    private void turnDealBro(int userId)
-    {
-        //if (Models.GameModel.Id == userId)
-        //{
-        //    Dispatch(AreaCode.UI, UIEvent.SHOW_DEAL_BUTTON, true);
-        //}
-    }
 
-    /// <summary>
-    /// 抢地主成功的处理
-    /// </summary>
-    private void grabLandlordBro(GrabDto dto)
-    {
-        //更改UI的身份显示
-        //Dispatch(AreaCode.UI, UIEvent.PLAYER_CHANGE_IDENTITY, dto.UserId);
-        //播放抢地主的声音
-        Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/Woman_Order");
-        //显示三张底牌
-        //Dispatch(AreaCode.UI, UIEvent.SET_TABLE_CARDS, dto.TableCardList);
-        //给对应的地主玩家 添加手牌显示出来
-        int eventCode = -1;
-        //if (dto.UserId == Models.GameModel.MatchRoomDto.LeftId)
-        //{
-        //    eventCode = CharacterEvent.ADD_LEFT_CARD;
-        //}
-        //else if (dto.UserId == Models.GameModel.MatchRoomDto.RightId)
-        //{
-        //    eventCode = CharacterEvent.ADD_RIGHT_CARD;
-        //}
-        //else if (dto.UserId == Models.GameModel.UserDto.Id)
-        //{
-        //    eventCode = CharacterEvent.ADD_MY_CARD;
-        //}
-        Dispatch(AreaCode.CHARACTER, eventCode, dto);
-    }
 
-    /// <summary>
-    /// 是否是第一个玩家抢地主 而不是 因为别的玩家不叫地主而转换的
-    /// </summary>
-    private bool isFirst = true;
-
-    /// <summary>
-    /// 转换抢地主
-    /// </summary>
-    /// <param name="userId"></param>
-    private void turnGrabBro(int userId)
-    {
-        if (isFirst == true)
-        {
-            isFirst = false;
-        }
-        else
-        {
-            //播放声音
-            Dispatch(AreaCode.AUDIO, AudioEvent.PLAY_EFFECT_AUDIO, "Fight/Woman_NoOrder");
-        }
-
-        ////如果是自身 就显示 两个抢地主和不抢地主的按钮
-        //if (userId == Models.GameModel.UserDto.Id)
-        //{
-        //    Dispatch(AreaCode.UI, UIEvent.SHOW_GRAB_BUTTON, true);
-        //}
-    }
-
-    /// <summary>
-    /// 获取到卡牌的处理
-    /// </summary>
-    /// <param name="cardList"></param>
-    //private void getCards(List<CardDto> cardList)
-    //{
-    //    //给自己玩家创建牌的对象
-    //    Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_MY_CARD, cardList);
-    //    Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_LEFT_CARD, null);
-    //    Dispatch(AreaCode.CHARACTER, CharacterEvent.INIT_RIGHT_CARD, null);
-
-    //    //设置倍数为1
-    //    Dispatch(AreaCode.UI, UIEvent.CHANGE_MUTIPLE, 1);
-    //}
 }

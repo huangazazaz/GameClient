@@ -29,6 +29,7 @@ public class UIEvent
     public const int INITIAL_DRAW_ONE = 25;//开局摸完一张牌
     public const int INITIAL_DRAW_FINISH = 26;//开局摸牌结束
     public const int DRAW = 27;//局内摸牌
+    //public const int PLAY = 28;//局内出牌
 
     //....
 
