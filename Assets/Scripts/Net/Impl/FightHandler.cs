@@ -14,7 +14,7 @@ public class FightHandler : HandlerBase
     {
         switch (subCode)
         {
-            case FightCode.SHUFFLE:
+            case FightCode.SHUFFLE or FightCode.DISPLAY_PLAY:
                 refreshMahjongPosition(value as FightRoomDto);
                 break;
             case FightCode.LEAVE_BRO:
@@ -36,6 +36,15 @@ public class FightHandler : HandlerBase
                 break;
             case FightCode.DRAW:
                 Dispatch(AreaCode.UI, UIEvent.DRAW, value as FightRoomDto);
+                break;
+            case FightCode.CHECK_WAFFLE_PLAY:
+                Dispatch(AreaCode.UI, UIEvent.CHECK_WAFFLE_PLAY, value as FightRoomDto);
+                break;
+            case FightCode.CHECK_WAFFLE_DRAW:
+                Dispatch(AreaCode.UI, UIEvent.CHECK_WAFFLE_DRAW, value as FightRoomDto);
+                break;
+            case FightCode.WAFFLE_PLAY:
+                Dispatch(AreaCode.UI, UIEvent.WAFFLE_PLAY, value as FightRoomDto);
                 break;
             default:
                 break;

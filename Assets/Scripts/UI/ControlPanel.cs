@@ -1,8 +1,10 @@
 ﻿using AhpilyServer;
 using Protocol.Code;
+using Protocol.Constant;
 using Protocol.Dto;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using TMPro;
 using UnityEngine;
@@ -15,7 +17,7 @@ public class ControlPanel : UIBase
 
     private void Awake()
     {
-        Bind(UIEvent.REFRESH_MAHJONG_POSITION, UIEvent.INITIAL_DRAW, UIEvent.INITIAL_DRAW_FINISH, UIEvent.READY_THROW, UIEvent.SET_CAMERA, UIEvent.THROW_THE_DICE, UIEvent.INITIAL_DRAW_ONE, UIEvent.DRAW);
+        Bind(UIEvent.WAFFLE_PLAY, UIEvent.CHECK_WAFFLE_PLAY, UIEvent.CHECK_WAFFLE_DRAW, UIEvent.REFRESH_MAHJONG_POSITION, UIEvent.INITIAL_DRAW, UIEvent.INITIAL_DRAW_FINISH, UIEvent.READY_THROW, UIEvent.SET_CAMERA, UIEvent.THROW_THE_DICE, UIEvent.INITIAL_DRAW_ONE, UIEvent.DRAW);
     }
 
     FightRoomDto fightRoomDto;
@@ -25,7 +27,7 @@ public class ControlPanel : UIBase
     Dictionary<int, Button> MahjongBtns;
     int style = 1;
     Dictionary<int, string> HandMahjongs;
-
+    Dictionary<int, Button> waffleBtns;
 
     public override void Execute(int eventCode, object message)
     {
@@ -40,15 +42,22 @@ public class ControlPanel : UIBase
             case UIEvent.THROW_THE_DICE:
                 fightRoomDto = message as FightRoomDto;
                 break;
+            case UIEvent.CHECK_WAFFLE_PLAY:
+                checkWafflePlay(message as FightRoomDto);
+                break;
+            case UIEvent.CHECK_WAFFLE_DRAW:
+                checkWaffleDraw(message as FightRoomDto);
+                break;
             case UIEvent.SET_CAMERA:
                 index = (int)message;
                 break;
-            case UIEvent.DRAW:
+            case UIEvent.DRAW or UIEvent.REFRESH_MAHJONG_POSITION or UIEvent.INITIAL_DRAW or UIEvent.INITIAL_DRAW_FINISH:
                 refresh(message as FightRoomDto);
                 fightRoomDto = message as FightRoomDto;
                 break;
-            case UIEvent.REFRESH_MAHJONG_POSITION or UIEvent.INITIAL_DRAW or UIEvent.INITIAL_DRAW_FINISH:
-                refresh(message as FightRoomDto);
+            case UIEvent.WAFFLE_PLAY:
+                refresh(message as FightRoomDto, 1);
+                fightRoomDto = message as FightRoomDto;
                 break;
             case UIEvent.INITIAL_DRAW_ONE:
                 refresh(message as FightRoomDto);
@@ -60,7 +69,6 @@ public class ControlPanel : UIBase
                     Dispatch(AreaCode.NET, 0, socketMsg);
                 }
                 break;
-
             default:
                 break;
         }
@@ -74,7 +82,22 @@ public class ControlPanel : UIBase
         Throw.onClick.AddListener(ThrowClick);
         socketMsg = new SocketMsg();
         MahjongBtns = new Dictionary<int, Button>();
+        waffleBtns = new Dictionary<int, Button>();
         HandMahjongs = new Dictionary<int, string>();
+        waffleBtns.Add(1, transform.Find("chi").GetComponent<Button>());
+        waffleBtns.Add(2, transform.Find("peng").GetComponent<Button>());
+        waffleBtns.Add(3, transform.Find("gang").GetComponent<Button>());
+        waffleBtns.Add(4, transform.Find("gang").GetComponent<Button>());
+        waffleBtns.Add(5, transform.Find("hu").GetComponent<Button>());
+        waffleBtns.Add(6, transform.Find("hu_self").GetComponent<Button>());
+        waffleBtns.Add(7, transform.Find("pass").GetComponent<Button>());
+        waffleBtns[1].onClick.AddListener(chooseChi);
+        waffleBtns[2].onClick.AddListener(choosePeng);
+        waffleBtns[3].onClick.AddListener(chooseGang);
+        waffleBtns[5].onClick.AddListener(chooseHu);
+        waffleBtns[6].onClick.AddListener(chooseHuS);
+        waffleBtns[7].onClick.AddListener(choosePass);
+        waffleBtnInactive();
         for (int i = 1; i <= 14; i++)
         {
             HandMahjongs.Add(i, "");
@@ -104,10 +127,98 @@ public class ControlPanel : UIBase
             checks[i] = false;
         }
     }
+    void chooseChi()
+    {
+        sendCheckInfo(1);
+    }
+    void choosePeng()
+    {
+        sendCheckInfo(2);
+    }
+    void chooseGang()
+    {
+        sendCheckInfo(3);
+    }
+    void chooseHu()
+    {
+        sendCheckInfo(5);
+    }
+    void chooseHuS()
+    {
+        sendCheckInfo(6);
+    }
+    void choosePass()
+    {
+        sendCheckInfo(0);
+    }
+
+    void sendCheckInfo(int waffle)
+    {
+        waffleBtnInactive();
+        fightRoomDto.chooseWaffle[index] = waffle;
+        fightRoomDto.WaffleChooseCnt += 1;
+        socketMsg.Change(OpCode.FIGHT, FightCode.CHECK_WAFFLE_PLAY, fightRoomDto);
+        Dispatch(AreaCode.NET, 0, socketMsg);
+    }
+
+    void checkWafflePlay(FightRoomDto dto)
+    {
+        fightRoomDto = dto;
+        if (dto.wafflesPlay[index].Count > 0)
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                if (dto.wafflesPlay[index].Keys.Contains(i))
+                {
+                    waffleBtns[i].gameObject.SetActive(true);
+                }
+            }
+            waffleBtns[7].gameObject.SetActive(true);
+            int cnt = 1;
+            for (int i = 6; i >= 1; i--)
+            {
+                if (waffleBtns[i].gameObject.activeSelf)
+                {
+                    waffleBtns[i].transform.position = waffleBtns[7].transform.position - new Vector3(160 * cnt, 0, 0);
+                    cnt++;
+                }
+            }
+        }
+        else
+        {
+            sendCheckInfo(0);
+        }
+    }
+    void checkWaffleDraw(FightRoomDto dto)
+    {
+        fightRoomDto = dto;
+        if (dto.wafflesDraw.Count > 0)
+        {
+            for (int i = 1; i <= 6; i++)
+            {
+                if (dto.wafflesDraw.Contains(i))
+                {
+                    waffleBtns[7].gameObject.SetActive(true);
+                    waffleBtns[i].gameObject.SetActive(true);
+                }
+            }
+        }
+        else
+        {
+            //TODO 自己摸牌waffle
+        }
+    }
+
 
     bool[] checks;
 
-
+    void waffleBtnInactive()
+    {
+        for (int i = 1; i <= 7; i++)
+        {
+            waffleBtns[i].gameObject.SetActive(false);
+        }
+    }
     void stateChange(int ind)
     {
         for (int i = 1; i <= 14; i++)
@@ -222,24 +333,32 @@ public class ControlPanel : UIBase
         Throw.gameObject.SetActive(false);
     }
 
-    void refresh(FightRoomDto dto)
+    void refresh(FightRoomDto dto, int op = 0)
     {
         for (int i = 1; i <= 13; i++)
         {
             MahjongBtns[i].gameObject.SetActive(false);
         }
-        for (int j = 1; j <= dto.SeatHandMahjongs[index].Count; j++)
+        for (int j = dto.SeatHandMahjongs[index].Count; j >= 1; j--)
         {
             string name = dto.SeatHandMahjongs[index][j - 1];
-            HandMahjongs[j] = name;
+            HandMahjongs[13 + j - dto.SeatHandMahjongs[index].Count] = name;
             name = name.Substring(0, name.Length - 1);
-            MahjongBtns[j].gameObject.SetActive(true);
-            MahjongBtns[j].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + name);
+            MahjongBtns[13 + j - dto.SeatHandMahjongs[index].Count].gameObject.SetActive(true);
+            MahjongBtns[13 + j - dto.SeatHandMahjongs[index].Count].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + name);
         }
 
         if (dto.drawMahjong[index] == "")
         {
             MahjongBtns[14].gameObject.SetActive(false);
+            if (op == 1 && index == dto.CurrentInd)
+            {
+                int pos = dto.SeatHandMahjongs[index].Count;
+                checks[pos] = true;
+                stateActive(MahjongBtns[pos].gameObject);
+                MahjongBtns[pos].gameObject.gameObject.SetActive(true);
+                MahjongBtns[pos].image.sprite = Resources.Load<Sprite>("UI/Mahjong/" + style.ToString() + "/" + dto.SeatHandMahjongs[index][pos].Substring(0, dto.SeatHandMahjongs[index][pos].Length - 1));
+            }
         }
         else
         {

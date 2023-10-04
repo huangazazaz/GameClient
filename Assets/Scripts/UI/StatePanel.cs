@@ -31,8 +31,8 @@ public class StatePanel : UIBase
     void Start()
     {
         promptMsg = new PromptMsg();
-        dice1 = transform.Find("dice1").GetComponent<Image>();
-        dice2 = transform.Find("dice2").GetComponent<Image>();
+        dice1 = transform.Find("diceImg1").GetComponent<Image>();
+        dice2 = transform.Find("diceImg2").GetComponent<Image>();
         dice1.GameObject().SetActive(false);
         dice2.GameObject().SetActive(false);
         name0 = transform.Find("name0").GetComponent<TMP_Text>();

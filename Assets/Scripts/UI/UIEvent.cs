@@ -30,6 +30,11 @@ public class UIEvent
     public const int INITIAL_DRAW_FINISH = 26;//开局摸牌结束
     public const int DRAW = 27;//局内摸牌
     //public const int PLAY = 28;//局内出牌
+    public const int CHECK_WAFFLE_PLAY = 29;//判断出牌吃碰杠胡
+    public const int CHECK_WAFFLE_DRAW = 30;//判断摸牌杠胡
+    //public const int WAFFLE_DRAW = 31;//吃碰摸牌
+    public const int WAFFLE_PLAY = 32;//杠打牌
+
 
     //....
 
